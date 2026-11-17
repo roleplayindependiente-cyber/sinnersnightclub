@@ -33,7 +33,7 @@
   text-align: center !important;
   background: radial-gradient(ellipse at top, #8b102140, transparent 75%);
 }
-
+ 
 #sinnersnight .sinnersnight-header::before {
   content: '';
   display: block;
@@ -67,7 +67,7 @@
   text-shadow: 0 0 4px #ff646ebf, 0 0 14px #ed334466, 0 0 30px #b9122633;
   animation: sinners-neon-v3 9s linear infinite;
 }
-
+ 
 #sinnersnight .sinnersnight-header h1::before,
 #sinnersnight .sinnersnight-header h1::after { content: none !important; }
 #sinnersnight .sinner-slogan {
@@ -79,7 +79,6 @@
   color: #e6c8b4 !important;
   text-shadow: 0 2px 4px #000c;
 }
-
 #sinnersnight .sinnersnight-description {
   margin: 0 26px !important;
   padding: 0 0 25px !important;
