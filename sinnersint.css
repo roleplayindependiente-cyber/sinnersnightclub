@@ -93,3 +93,227 @@
 #sinnersnight .sinners-info-title {
   display: block !important;
   margin: 0 0 20px !important;
+  text-align: center !important;
+  font-size: 11px !important;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  color: #ffe4c4 !important;
+}
+
+#sinnersnight .sinnersnight-description p {
+  margin: 0 0 17px !important;
+  padding: 0 !important;
+  color: inherit !important;
+  font: inherit !important;
+}
+
+#sinnersnight .sinnersnight-description p:last-child {
+  margin-bottom: 0 !important;
+}
+
+#sinnersnight .sinner-icon {
+  display: inline-block !important;
+  margin: 0 7px 0 0 !important;
+  padding: 0 !important;
+  color: #ed3344 !important;
+  font-size: 12px !important;
+  font-style: normal !important;
+  line-height: 1 !important;
+}
+
+#sinnersnight .sinners-hours-title {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 7px !important;
+  line-height: 1.5;
+}
+
+#sinnersnight .sinners-hours-title .sinner-icon {
+  flex: none;
+  margin: 0 !important;
+}
+
+#sinnersnight .sinners-hours-title b {
+  display: inline !important;
+  margin: 0 !important;
+}
+
+#sinnersnight .sinners-subtitle {
+  display: block !important;
+  width: auto !important;
+  margin: 28px 22px 22px !important;
+  padding: 0 8px !important;
+  border: 0 !important;
+  background: none !important;
+  color: #ffe4c4 !important;
+  font: 500 11px/1.8 'Poppins', Arial, sans-serif !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1.4px;
+  text-shadow:
+    0 2px 3px #000,
+    0 0 12px rgba(255, 228, 196, 0.1);
+}
+
+
+#sinnersnight .sinnersnight-gallery {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 16px 12px !important;
+  align-items: stretch;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
+  text-align: left !important;
+}
+
+
+#sinnersnight .sinnersnight-gallery > br,
+#sinnersnight .sinnersimage-container > br,
+#sinnersnight > br,
+#sinnersnight .sinnersnight-header > br {
+  display: none !important;
+}
+
+
+#sinnersnight .sinnersimage-container {
+  display: flex !important;
+  flex-direction: column;
+  position: relative;
+  min-width: 0 !important;
+  width: auto !important;
+  max-width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  float: none !important;
+  overflow: hidden;
+  box-sizing: border-box !important;
+  border: 1px solid rgba(255, 228, 196, 0.12) !important;
+  border-radius: 7px;
+  background: #110b0d !important;
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.32);
+}
+
+#sinnersnight .sinnersimage-container img {
+  display: block !important;
+  flex: none;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  float: none !important;
+}
+
+
+#sinnersnight .sinnersimg-desc {
+  flex: 1;
+  min-width: 0;
+  margin: 0 !important;
+  padding: 14px 12px 17px !important;
+  border-top: 1px solid rgba(237, 51, 68, 0.2);
+  background: linear-gradient(180deg, #150d0f, #100b0c);
+  color: #dacdca !important;
+  font: 400 12px/1.8 'Poppins', Arial, sans-serif !important;
+  text-align: left !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
+  overflow-wrap: break-word;
+}
+
+
+#sinnersnight b,
+#sinnersnight strong {
+  color: #ffe4c4 !important;
+  font-weight: 600 !important;
+  text-shadow:
+    0 1px 2px #000,
+    0 0 9px rgba(255, 228, 196, 0.12);
+}
+
+#sinnersnight .sinnersimg-desc > b:first-child {
+  display: block !important;
+  margin: 0 0 9px !important;
+  font-size: 10px !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
+}
+
+#sinnersnight em,
+#sinnersnight i:not([class*="fa-"]):not(.sinner-icon) {
+  color: #e6a4aa !important;
+  font-style: italic !important;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+#sinnersnight u {
+  color: #f0dbce !important;
+  text-decoration: underline solid #ed3344 1px !important;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: auto;
+}
+
+#sinnersnight a {
+  color: #ffe4c4 !important;
+  text-decoration: underline;
+  text-decoration-color: #ed3344;
+  text-underline-offset: 4px;
+}
+
+#sinnersnight a:hover {
+  color: #ed3344 !important;
+}
+
+#sinnersnight a:focus-visible {
+  outline: 2px solid #ed3344;
+  outline-offset: 4px;
+}
+
+
+@keyframes sinners-neon-v3 {
+  0%, 43%, 47%, 100% {
+    opacity: 1;
+  }
+
+  44%, 46% {
+    opacity: 0.72;
+  }
+
+  45% {
+    opacity: 0.95;
+  }
+}
+
+
+@media (max-width: 480px) {
+  #sinnersnight .sinnersnight-header {
+    padding: 24px 14px !important;
+  }
+
+  #sinnersnight .sinnersnight-description {
+    margin: 0 18px !important;
+  }
+
+  #sinnersnight .sinnersnight-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    padding: 0 12px !important;
+    gap: 12px 10px !important;
+  }
+
+  #sinnersnight .sinnersimg-desc {
+    padding: 12px 10px 14px !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #sinnersnight .sinnersnight-header h1 {
+    animation: none !important;
+  }
+}
