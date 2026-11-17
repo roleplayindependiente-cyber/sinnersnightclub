@@ -1,230 +1,225 @@
-.sinnersnight-event {
-  width: 100%;
-  max-width: 550px;
-  font-family: 'Poppins', sans-serif;
-  padding: 0 0 45px;
-  margin: auto;
-  position: relative;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow:
-    0 16px 40px rgba(0, 0, 0, 0.45),
-    0 0 20px rgba(166, 15, 30, 0.08);
-  text-align: center;
-  color: #eee5df !important;
-  box-sizing: border-box;
-  background-color: #090707;
-  border: 1px solid #301418;
-
-  --sinners-red: #ed3344;
-  --sinners-ivory: #ffe4c4;
-  --sinners-text: #d4c7c4;
-  --sinners-muted: #b69d9d;
-  --sinners-line: rgba(237, 51, 68, 0.2);
-}
-
-.sinnersnight-event *,
-.sinnersnight-event *::before,
-.sinnersnight-event *::after {
-  box-sizing: border-box;
-}
-
-/* Encabezado: neón sutil sobre negro y vino */
-
 .sinnersnight-event .sinnersnight-header {
-  position: relative;
-  padding: 45px 24px 32px;
-  background:
-    radial-gradient(
-      ellipse at 50% 0%,
-      rgba(139, 16, 33, 0.25),
-      transparent 75%
-    );
-}
-
-.sinnersnight-event .sinnersnight-header::after {
-  content: "";
-  display: block;
-  width: 65px;
-  height: 1px;
-  margin: 25px auto 0;
-  background: var(--sinners-red);
-  box-shadow: 0 0 9px rgba(237, 51, 68, 0.45);
+  padding-top: 30px;
 }
 
 .sinnersnight-event .sinnersnight-header h1 {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-family: inherit;
-  font-size: clamp(23px, 5vw, 34px);
+  position: relative;
+  padding-top: 58px;
   font-weight: 300;
-  line-height: 1.3;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: #ff5b63;
+  color: #ff7379;
   text-shadow:
-    0 0 5px rgba(237, 51, 68, 0.45),
-    0 0 18px rgba(237, 51, 68, 0.2);
+    0 1px 1px #34070c,
+    0 0 4px rgba(255, 100, 110, 0.75),
+    0 0 14px rgba(237, 51, 68, 0.4),
+    0 0 30px rgba(185, 18, 38, 0.2);
+  animation: sinners-neon-flicker 9s linear infinite;
+}
+
+.sinnersnight-event .sinnersnight-header h1::before,
+.sinnersnight-event .sinnersnight-header h1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 27px;
+  height: 43px;
+  border-radius: 75% 20% 65% 40%;
+  background: transparent;
+  box-shadow: inset -5px -3px 0 #ff626c;
+  filter: drop-shadow(0 0 4px rgba(237, 51, 68, 0.65));
+  pointer-events: none;
+}
+
+.sinnersnight-event .sinnersnight-header h1::before {
+  left: calc(50% - 32px);
+  transform: rotate(-22deg);
+}
+
+.sinnersnight-event .sinnersnight-header h1::after {
+  right: calc(50% - 32px);
+  transform: scaleX(-1) rotate(-22deg);
+}
+
+@keyframes sinners-neon-flicker {
+  0%, 43%, 47%, 100% {
+    opacity: 1;
+    text-shadow:
+      0 1px 1px #34070c,
+      0 0 4px rgba(255, 100, 110, 0.75),
+      0 0 14px rgba(237, 51, 68, 0.4),
+      0 0 30px rgba(185, 18, 38, 0.2);
+  }
+
+  44%, 46% {
+    opacity: 0.78;
+    text-shadow:
+      0 1px 1px #34070c,
+      0 0 3px rgba(237, 51, 68, 0.25);
+  }
+
+  45% {
+    opacity: 0.95;
+    text-shadow:
+      0 0 5px rgba(255, 100, 110, 0.6),
+      0 0 16px rgba(237, 51, 68, 0.3);
+  }
+}
+
+.sinnersnight-event .sinnersnight-description,
+.sinnersnight-event .sinnersimg-desc {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75);
 }
 
 .sinnersnight-event .sinner-slogan {
-  margin-top: 12px;
-  font-size: 11px;
-  font-weight: 400;
-  line-height: 1.7;
-  letter-spacing: 1.4px;
-  color: var(--sinners-ivory);
+  color: #e6c8b4;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
-
-/* Información */
-
-.sinnersnight-event .sinnersnight-description {
-  margin: 0 30px;
-  padding: 0 0 28px;
-  border-bottom: 1px solid var(--sinners-line);
-  text-align: left;
-  font-size: 13px;
-  line-height: 1.9;
-  color: var(--sinners-text);
-  overflow-wrap: break-word;
-}
-
-.sinnersnight-event .sinnersnight-description > b {
-  display: block;
-  margin: 0 0 22px;
-  text-align: center;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.7;
-  letter-spacing: 1.8px;
-  text-transform: uppercase;
-  color: var(--sinners-ivory);
-}
-
-.sinnersnight-event .sinnersnight-description p {
-  margin: 0 0 17px;
-  padding: 0;
-}
-
-.sinnersnight-event .sinnersnight-description p:last-child {
-  margin-bottom: 0;
-}
-
-.sinnersnight-event .sinnersnight-description p b {
-  font-weight: 500;
-  color: var(--sinners-ivory);
-}
-
-.sinnersnight-event .sinner-icon {
-  margin-right: 7px;
-  color: var(--sinners-red);
-  font-size: 12px;
-}
-
-/* Título de la galería */
 
 .sinnersnight-event .sinners-subtitle {
-  margin: 30px 24px 23px;
-  padding: 0;
-  border: 0;
-  font-family: inherit;
-  font-size: 11px;
-  font-weight: 500;
-  line-height: 1.8;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   color: var(--sinners-ivory);
+  text-shadow:
+    0 2px 3px #000,
+    0 0 12px rgba(255, 228, 196, 0.1);
 }
 
-/* Galería */
+.sinnersnight-event b,
+.sinnersnight-event strong,
+.sinnersnight-event .sinnersnight-description p b,
+.sinnersnight-event .sinnersimg-desc b {
+  color: var(--sinners-ivory);
+  font-weight: 600;
+  text-shadow:
+    0 1px 2px #000,
+    0 0 9px rgba(255, 228, 196, 0.12);
+}
+
+.sinnersnight-event em,
+.sinnersnight-event i:not([class*="fa-"]):not(.sinner-icon) {
+  color: #e6a4aa;
+  font-style: italic;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.65);
+}
+
+.sinnersnight-event u {
+  color: #f0dbce;
+  text-decoration-line: underline;
+  text-decoration-color: var(--sinners-red);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration-skip-ink: auto;
+}
+
+.sinnersnight-event .sinners-hours-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  margin-bottom: 5px;
+  vertical-align: middle;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.sinnersnight-event .sinners-hours-title .sinner-icon {
+  display: inline-block;
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  font-style: normal;
+  line-height: 1;
+  color: var(--sinners-red);
+}
+
+.sinnersnight-event .sinners-hours-title b {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
 
 .sinnersnight-event .sinnersnight-gallery {
   display: grid;
-  grid-template-columns: minmax(0, 1fr);
-  gap: 24px;
-  padding: 0 24px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 18px 14px;
+  padding: 0 22px;
+}
+
+.sinnersnight-event .sinnersnight-gallery > br {
+  display: none;
 }
 
 .sinnersnight-event .sinnersimage-container {
+  display: flex;
+  flex-direction: column;
+  width: auto;
   min-width: 0;
   margin: 0;
-  overflow: hidden;
-  border: 1px solid rgba(255, 228, 196, 0.09);
-  border-radius: 6px;
-  background: #100b0c;
+  border: 1px solid rgba(255, 228, 196, 0.1);
+  border-radius: 7px;
+  background: #110b0d;
+  box-shadow:
+    0 7px 16px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 228, 196, 0.025);
 }
 
 .sinnersnight-event .sinnersimage-container img {
   display: block;
+  flex: 0 0 auto;
   width: 100%;
   max-width: 100%;
   height: auto;
   margin: 0;
-  padding: 0;
-  border: 0;
-  border-radius: 0;
 }
 
 .sinnersnight-event .sinnersimg-desc {
-  padding: 18px 20px 21px;
-  border-top: 1px solid var(--sinners-line);
-  text-align: left;
+  flex: 1;
+  padding: 14px 13px 17px;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 1.85;
-  color: var(--sinners-text);
+  line-height: 1.8;
+  text-align: left;
+  color: #dacdca;
+  background: linear-gradient(180deg, #150d0f, #100b0c);
   overflow-wrap: break-word;
 }
 
-.sinnersnight-event .sinnersimg-desc b {
+.sinnersnight-event .sinnersimg-desc > b:first-child {
   display: block;
-  margin-bottom: 8px;
-  font-size: 11px;
-  font-weight: 500;
+  margin-bottom: 9px;
+  font-size: 10px;
   line-height: 1.6;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   text-transform: uppercase;
-  color: var(--sinners-ivory);
 }
 
-/* Enlaces, si los agregas */
-
-.sinnersnight-event a {
-  color: var(--sinners-ivory);
-  text-decoration: underline;
-  text-decoration-color: var(--sinners-red);
-  text-underline-offset: 4px;
+.sinnersnight-event .sinnersimg-desc b:not(:first-child) {
+  display: inline;
+  margin: 0;
+  font-size: inherit;
+  letter-spacing: normal;
+  text-transform: none;
 }
 
-.sinnersnight-event a:hover {
-  color: var(--sinners-red);
-}
-
-.sinnersnight-event a:focus-visible {
-  outline: 2px solid var(--sinners-red);
-  outline-offset: 4px;
-}
-
-/* Ajustes internos para móvil; mismo ancho exterior */
 
 @media (max-width: 480px) {
-  .sinnersnight-event .sinnersnight-header {
-    padding: 35px 18px 28px;
-  }
-
-  .sinnersnight-event .sinnersnight-description {
-    margin-right: 20px;
-    margin-left: 20px;
-  }
-
   .sinnersnight-event .sinnersnight-gallery {
-    padding-right: 16px;
-    padding-left: 16px;
-    gap: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 10px;
+    padding-right: 12px;
+    padding-left: 12px;
   }
 
   .sinnersnight-event .sinnersimg-desc {
-    padding: 16px;
+    padding: 12px 10px 14px;
+  }
+
+  .sinnersnight-event .sinnersnight-header h1 {
+    letter-spacing: 1px;
+  }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  .sinnersnight-event .sinnersnight-header h1 {
+    animation: none;
   }
 }
